@@ -14,7 +14,4 @@
       <Filter>headers</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="buttons.png" />
-  </ItemGroup>
 </Project>

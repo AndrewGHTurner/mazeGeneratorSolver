@@ -13,24 +13,33 @@ public:
 	Box(int width, int height, String title);
 	void mousePress(int XCoord, int YCoord);
 	void mouseRelease(int XCoord, int YCoord);
-	void addButton(int width, int height, int topLeftX, int topLeftY, int buttonType);
+	void addButton(int width, int height, int topLeftX, int topLeftY, int buttonType, void(*funcptr)());
+	void addSlider(int width, int height, int topLeftX, int topLeftY);
 	void drawUI();
 
-	int whichButton(int XCoord, int YCoord);
+	
+
+	enum buttonTextureCodes
+	{
+		endPosReleased = 0,
+		endPosPressed = 1,
+		startPosReleased = 2,
+		startPosPressed = 3
+	};
 private:
 	VertexArray buttonVertices;
+	VertexArray sliderVertices;
 
 	Texture buttonTexture;
 	RenderStates buttonRenderStates;
 
-	enum buttonTextureCodes
-	{
-		startPosReleased = 0,
-		startPosPressed = 1
-	};
+	int whichButton(int XCoord, int YCoord);
+	int whichSlider(int XCoord, int YCoord);
 
 	int numButtonVertices = 0;
+	int numSliderVertices = 0;
 	
 	vector<int> buttonTypes;
+	vector<void(*)()> buttonFunctions;
 
 };

@@ -1,4 +1,3 @@
-#pragma once
 #include "box.h"
 
 #include <SFML/Graphics.hpp>
@@ -9,13 +8,20 @@
 using namespace std;
 using namespace sf;
 
+void print()
+{
+	cout << "printed\n";
+}
+
 int main()
 {
 	Box box(1280, 720, "mazeGereratorSolver");
 
-	box.addButton(400, 100, 20, 10, 0);
+	box.addButton(400, 100, 20, 10, Box::buttonTextureCodes::startPosReleased, print);
 
-	box.addButton(400, 100, 400, 400, 0);
+	box.addButton(400, 100, 20, 120, Box::buttonTextureCodes::endPosReleased, print);
+
+	box.addSlider(400, 100, 20, 240);
 
 	box.setFramerateLimit(10);
 	while (box.isOpen())

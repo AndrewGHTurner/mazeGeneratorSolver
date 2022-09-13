@@ -135,9 +135,6 @@
   <ItemGroup>
     <ClInclude Include="box.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="buttons.png" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
