@@ -2,10 +2,19 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="box.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="headers">
       <UniqueIdentifier>{47bf5d64-62db-4d75-8ee3-88e676e04a5d}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="box.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="buttons.png" />
   </ItemGroup>
 </Project>
